@@ -21,7 +21,7 @@ describe "E-mail signup" do
     end
     
     it "sends the e-mail to app 2 when clicked" do
-      RestClient.should_receive(:post).with("http://desafioapp2.heroku.com/users", {:email => "test@mail.com"}).and_return(@response)
+      RestClient.should_receive(:post).with("http://desafioapp2ticolucci.heroku.com/users", {:email => "test@mail.com"}).and_return(@response)
       click_on "Send"
     end
     

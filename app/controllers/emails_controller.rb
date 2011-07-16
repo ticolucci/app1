@@ -3,7 +3,7 @@ class EmailsController < ApplicationController
   end
 
   def create
-    response = RestClient.post("http://desafioapp2.heroku.com/users", {:email => params[:email]})
+    response = RestClient.post("http://desafioapp2ticolucci.heroku.com/users", {:email => params[:email]})
     if response.code == 201
       flash[:notice] = "E-mail cadastrado com sucesso"
     end
