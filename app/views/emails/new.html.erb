@@ -1,2 +1,7 @@
-<input type="email" name="email" />
+<%= flash[:notice] %>
 
+<%= form_tag "/users", :method => :post do %>
+	<%= label_tag :email, "E-mail" %>
+	<input id="email" type="email" name="email" />
+	<%= button_tag "Send"%>
+<% end %>
